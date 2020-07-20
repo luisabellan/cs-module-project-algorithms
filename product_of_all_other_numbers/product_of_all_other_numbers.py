@@ -5,7 +5,43 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+        int a[n] # This is the input
+    int products_below[n];
+    p=1;
+    for(int i = 0 ;i < n ; ++i) {
+    products_below[i]=p;
+    p*=a[i];
+    }
+
+    int products_above[n];
+    p=1;
+    for(int i=N-1;i>=0;--i) {
+    products_above[i]=p;
+    p*=a[i];
+    }
+
+    int products[n]; // This is the result
+    for(int i=0;i<N;++i) {
+    products[i]=products_below[i]*products_above[i];
+    }
+    If you need to be O(1) in space too you can do this (which is less clear IMHO)
+
+    int a[n] // This is the input
+    int products[n];
+
+    // Get the products below the current index
+    p=1;
+    for(int i=0;i<n;++i) {
+    products[i]=p;
+    p*=a[i];
+    }
+
+    // Get the products above the curent index
+    p=1;
+    for(int i=n-1;i>=0;--i) {
+    products[i]*=p;
+    p*=a[i];
+    }
 
 
 if __name__ == '__main__':
