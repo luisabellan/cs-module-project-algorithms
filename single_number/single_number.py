@@ -7,10 +7,10 @@ def single_number(arr = [-1]):
     odd_one_out = 0
    
     sorted_arr = sorted(arr)
-    print(str(sorted_arr))
+    print(sorted_arr)
 
-    for i in range(sorted_arr):
-        if not sorted_arr[i] == sorted_arr[i+1]:
+    for i in sorted_arr:
+        if not  == i + 1:
             odd_one_out = sorted_arr[i]
 
             return  odd_one_out
