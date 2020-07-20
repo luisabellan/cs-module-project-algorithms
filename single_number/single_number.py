@@ -2,20 +2,21 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
-def single_number(arr = [-1]):
-    # Your code here
-    odd_one_out = 0
-   
-    sorted_arr = sorted(arr)
-    print(sorted_arr)
+def single_number(arr):
 
-    for i in sorted_arr:
-        if not  == i + 1:
-            odd_one_out = sorted_arr[i]
-
-            return  odd_one_out
     
-
+    # Your code here
+   
+   
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
+    
+   
+    for i in range(1,len(arr)):
+        arr[0] ^= arr[i]
+    return arr[0]
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
