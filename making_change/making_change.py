@@ -5,7 +5,15 @@ import sys
 def making_change(amount, denominations):
   # Your code here
 
-  pass
+  target = amount
+  coins = denominations
+  ways = [1]+[0]*target
+  for coin in coins:
+      for i in range(coin,target+1):
+          ways[i]+=ways[i-coin]
+  ways = ways[target] 
+  #print(ways)
+  return ways
 
 
 if __name__ == "__main__":
